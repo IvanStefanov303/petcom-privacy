@@ -3,220 +3,450 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PetCom Privacy Policy</title>
-  <meta name="description" content="Privacy Policy for PetCom: Pet Care.">
+  <title>PetCom: Pet Care | Privacy Policy | Leobella Technologies Ltd</title>
+  <meta name="description" content="Privacy Policy for PetCom: Pet Care, published by Leobella Technologies Ltd.">
+  <meta name="robots" content="index,follow">
   <style>
     :root {
-      --bg: #f6f9fc;
-      --card: #ffffff;
+      --bg: #f6f8fb;
+      --surface: #ffffff;
       --text: #172033;
-      --muted: #5d687a;
-      --blue: #1769d2;
-      --blue-dark: #0d4fa8;
-      --line: #dbe5f0;
-      --soft: #eef5ff;
-      --warn: #fff7e6;
-      --warn-border: #f2c36b;
+      --muted: #5f6b7a;
+      --border: #dfe5ec;
+      --accent: #2158d5;
+      --accent-soft: #eef4ff;
+      --max: 920px;
     }
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      background: var(--bg);
-      color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      line-height: 1.65;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
     }
-    .page { max-width: 960px; margin: 0 auto; padding: 32px 18px 64px; }
-    .hero {
-      background: linear-gradient(135deg, var(--blue-dark), var(--blue));
-      color: white;
-      border-radius: 22px;
-      padding: 34px 32px;
-      margin-bottom: 22px;
-      box-shadow: 0 10px 30px rgba(23, 105, 210, 0.18);
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
+    .page {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 40px auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: 0 18px 50px rgba(23, 32, 51, 0.08);
+      overflow: hidden;
     }
-    .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; margin-bottom: 12px; }
-    .paw { width: 34px; height: 34px; border-radius: 10px; background: rgba(255,255,255,0.16); display: grid; place-items: center; font-size: 20px; }
-    h1 { margin: 0 0 8px; font-size: clamp(32px, 5vw, 52px); line-height: 1.08; }
-    .hero p { margin: 7px 0 0; color: rgba(255,255,255,0.9); }
-    .card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 26px 28px; margin: 18px 0; box-shadow: 0 4px 16px rgba(28, 52, 84, 0.05); }
-    h2 { color: var(--blue-dark); margin-top: 0; margin-bottom: 12px; font-size: 24px; }
-    h3 { margin-top: 22px; margin-bottom: 8px; font-size: 18px; }
-    p { margin: 10px 0; }
-    ul { padding-left: 22px; margin-top: 8px; }
-    li { margin: 7px 0; }
-    .notice { background: var(--warn); border: 1px solid var(--warn-border); border-radius: 14px; padding: 16px 18px; margin: 18px 0; }
-    .notice strong { color: #8c5a00; }
-    .summary { background: var(--soft); border-left: 5px solid var(--blue); }
-    a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 2px; }
-    code { background: #f0f4f8; padding: 2px 6px; border-radius: 6px; font-size: 0.95em; }
-    .footer { color: var(--muted); font-size: 14px; text-align: center; padding-top: 18px; }
-    @media (max-width: 640px) {
-      .hero { padding: 28px 22px; border-radius: 18px; }
-      .card { padding: 22px 20px; }
+    header {
+      padding: 48px 48px 36px;
+      background: linear-gradient(135deg, #f8fbff 0%, #eef4ff 100%);
+      border-bottom: 1px solid var(--border);
+    }
+    header .eyebrow {
+      margin: 0 0 10px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    h1 { margin: 0 0 14px; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.1; }
+    .meta { margin: 0; color: var(--muted); }
+    main { padding: 42px 48px 54px; }
+    .summary {
+      padding: 24px;
+      margin: 0 0 36px;
+      background: var(--accent-soft);
+      border: 1px solid #d8e6ff;
+      border-radius: 14px;
+    }
+    h2 { margin: 42px 0 12px; font-size: 1.5rem; line-height: 1.3; }
+    h3 { margin: 26px 0 8px; font-size: 1.1rem; }
+    p { margin: 0 0 16px; }
+    ul { margin: 0 0 18px; padding-left: 1.4rem; }
+    li { margin: 6px 0; }
+    .contact-box {
+      margin-top: 20px;
+      padding: 20px 22px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fafbfc;
+    }
+    footer {
+      padding: 24px 48px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.92rem;
+      background: #fafbfc;
+    }
+    @media (max-width: 680px) {
+      .page { width: 100%; margin: 0; border: 0; border-radius: 0; }
+      header, main, footer { padding-left: 22px; padding-right: 22px; }
+      header { padding-top: 34px; }
     }
   </style>
 </head>
 <body>
-  <main class="page">
-    <section class="hero">
-      <div class="brand"><span class="paw" aria-hidden="true">🐾</span><span>PetCom: Pet Care</span></div>
-      <h1>Privacy Policy</h1>
-      <p>Effective date: 14 September 2026</p>
-      <p>Publisher: <strong>Leobella Technologies Ltd</strong></p>
-      <p>Package name: <strong>com.petcompanion.pet_companion</strong></p>
-    </section>
+  <article class="page">
+    <header>
+      <p class="eyebrow">Leobella Technologies Ltd</p>
+      <h1>🐾 PetCom: Pet Care — Privacy Policy</h1>
+      <p class="meta">
+        <strong>Effective date:</strong> 15 September 2026<br>
+        <strong>Publisher:</strong> Leobella Technologies Ltd<br>
+        <strong>Platforms:</strong> Android and iOS
+      </p>
+    </header>
 
-    <section class="card summary">
-      <h2>Privacy at a glance</h2>
-      <p>PetCom is designed to help you manage pet profiles, care information, reminders, nearby pet services, maps, photographs and pet-passport information. Some information is stored locally on your device, while certain features may communicate with third-party services when you choose to use them.</p>
-      <p>PetCom does not require you to provide payment-card details directly to the app. Where purchases are offered, payment processing is handled by the relevant app store.</p>
-    </section>
+    <main>
+      <section class="summary" aria-labelledby="privacy-at-a-glance">
+        <h2 id="privacy-at-a-glance" style="margin-top:0;">Privacy at a glance</h2>
+        <p>PetCom is designed to help users organise pet profiles, care information, reminders, photographs, pet-passport information, maps, nearby pet services and other pet-care information.</p>
+        <p>Core pet records are designed to be stored locally on the user's device. PetCom does not currently require a PetCom user account.</p>
+        <p>Some optional features communicate with third-party services when you choose to use them. For example, location and search information may be sent to Google Maps Platform and Google Places services when you request nearby pet services or map information.</p>
+        <p><strong>PetCom does not sell your personal information.</strong></p>
+        <p>PetCom does not use your personal information for cross-app advertising tracking.</p>
+        <p>PetCom does not require you to provide payment-card information directly to the app. Where purchases or subscriptions are offered, payments are processed by the relevant app store.</p>
+      </section>
 
-   
+      <section>
+        <h2>1. Who this Privacy Policy applies to</h2>
+        <p>This Privacy Policy explains how <strong>PetCom: Pet Care</strong> ("PetCom", "the app", "we", "us" or "our"), published by <strong>Leobella Technologies Ltd</strong>, handles information when you use the PetCom mobile application.</p>
+        <p>This policy applies to the current Android and iOS versions of PetCom.</p>
+        <p>By using PetCom, you acknowledge the practices described in this Privacy Policy.</p>
+        <p>Where we rely on consent for particular processing, you may withdraw that consent as explained in this policy.</p>
+      </section>
 
-    <section class="card">
-      <h2>1. Who this policy applies to</h2>
-      <p>This Privacy Policy explains how PetCom: Pet Care (“PetCom”, “the app”, “we” or “us”) handles information when you use the PetCom mobile application.</p>
-      <p>By using PetCom, you acknowledge the practices described in this policy.</p>
-    </section>
+      <section>
+        <h2>2. Information PetCom may process</h2>
+        <h3>Pet profile and care information</h3>
+        <p>Information you choose to enter may include:</p>
+        <ul>
+          <li>pet name;</li><li>species;</li><li>breed;</li><li>sex;</li><li>date of birth or age;</li>
+          <li>colour;</li><li>weight;</li><li>microchip information;</li><li>vaccination information;</li>
+          <li>treatment or care information;</li><li>medication or care notes;</li><li>reminders;</li>
+          <li>appointments;</li><li>pet-passport information; and</li><li>other pet-related records you choose to store.</li>
+        </ul>
+        <p>Core pet records are designed to remain locally stored on your device unless a particular feature clearly tells you that information will be sent to an external service.</p>
 
-    <section class="card">
-      <h2>2. Information PetCom may process</h2>
+        <h3>Photos and documents</h3>
+        <p>If you choose to add a pet photograph, use the camera, select an image, or import information from a pet passport or other document, PetCom may access your camera or photo library after you grant the relevant device permission.</p>
+        <p>Selected pet-passport or document images may contain information about the pet and may also contain personal information relating to an owner, keeper, veterinary professional or another person.</p>
+        <p>You should only import documents that you are authorised to use.</p>
 
-      <h3>Pet profile and care information</h3>
-      <p>Information you enter about your pet may include details such as name, species, breed, sex, date of birth, colour, weight, microchip information, care notes, vaccination or treatment information, reminders and other pet-related records.</p>
+        <h3>Location information</h3>
+        <p>If you enable location-based features, PetCom may process approximate or precise device location.</p>
+        <p>Location may be used for features including:</p>
+        <ul>
+          <li>nearby veterinary practices;</li><li>nearby pet-related services;</li><li>maps;</li>
+          <li>weather-related information;</li><li>location-aware emergency information;</li>
+          <li>location-aware educational information; and</li><li>other features that depend on the user's current area.</li>
+        </ul>
+        <p>Location access is optional unless a particular feature requires it.</p>
 
-      <h3>Photos and documents</h3>
-      <p>If you choose to add a pet photograph or import information from a pet passport or other document, PetCom may access the camera or photo library only after you grant the relevant device permission.</p>
+        <h3>Search information</h3>
+        <p>When you search for places, services, addresses or other location-related information, PetCom may process the search terms and geographic search parameters needed to provide the requested results.</p>
 
-      <h3>Location</h3>
-      <p>If you enable location-based features, PetCom may use approximate or precise device location to support features such as nearby pet services, maps, weather-related information and location-aware emergency or learning content.</p>
+        <h3>Notifications</h3>
+        <p>If you enable notifications, PetCom may schedule notifications for reminders and other pet-care alerts. Notification permission is controlled through your device operating system.</p>
 
-      <h3>Notifications</h3>
-      <p>If you enable notifications, PetCom may schedule local notifications for reminders and other pet-care alerts. Notification permission is controlled through your device.</p>
+        <h3>Device and technical information</h3>
+        <p>PetCom, the operating system and third-party SDKs or services integrated into PetCom may process limited technical information necessary to provide features, maintain security, diagnose errors and measure technical performance.</p>
+        <p>Depending on the SDK or service, this may include:</p>
+        <ul>
+          <li>device model and operating-system version;</li><li>application identifier and application version;</li>
+          <li>installation or technical identifiers;</li><li>API configuration information;</li><li>performance information;</li>
+          <li>feature events;</li><li>diagnostic information; and</li><li>error information.</li>
+        </ul>
+      </section>
 
-      <h3>Device and technical information</h3>
-      <p>PetCom and the operating system or third-party service providers used by the app may process limited technical information required to provide functionality, diagnose errors, secure the service, or complete app-store operations.</p>
-    </section>
+      <section>
+        <h2>3. How PetCom uses information</h2>
+        <p>PetCom may process information in order to:</p>
+        <ul>
+          <li>create and display pet profiles;</li><li>store pet-care information;</li><li>organise health and care records;</li>
+          <li>store and display reminders;</li><li>schedule local notifications;</li><li>display maps;</li>
+          <li>locate nearby pet-related services;</li><li>provide weather-related information;</li><li>provide location-aware information;</li>
+          <li>process selected pet-passport or document images;</li><li>extract text through optical character recognition;</li>
+          <li>open external websites, searches, maps or navigation applications when requested;</li>
+          <li>provide purchases or subscription entitlements where offered;</li><li>provide support;</li>
+          <li>maintain app security;</li><li>diagnose technical problems;</li><li>maintain compatibility and performance;</li>
+          <li>prevent misuse; and</li><li>comply with applicable legal obligations.</li>
+        </ul>
+        <p>PetCom does not use pet-care records or precise location information for advertising profiling.</p>
+      </section>
 
-    <section class="card">
-      <h2>3. How PetCom uses information</h2>
-      <ul>
-        <li>create and display pet profiles;</li>
-        <li>store pet care, health and reminder information;</li>
-        <li>display maps and nearby pet-service information;</li>
-        <li>provide location-aware weather, learning or emergency information where enabled;</li>
-        <li>import information from photographs or pet-passport images;</li>
-        <li>schedule reminders and notifications;</li>
-        <li>open external websites or mapping services when you request them;</li>
-        <li>support purchases or subscriptions offered through the relevant app store;</li>
-        <li>maintain app security, stability and functionality.</li>
-      </ul>
-    </section>
+      <section>
+        <h2>4. Local storage and Leobella Technologies servers</h2>
+        <p>PetCom is designed so that core pet information is primarily stored locally on the user's device.</p>
+        <p>This may include pet profiles, care records, reminders and other information entered directly into the app.</p>
+        <p>The current version of PetCom does not require a PetCom cloud account.</p>
+        <p>Leobella Technologies Ltd does not intentionally receive a copy of your complete locally stored pet profile, care history, pet photographs or pet-passport content merely because you create or store that information in PetCom.</p>
+        <p>Some optional functions communicate with third-party online services. Information necessary to fulfil those requests may leave the device as described elsewhere in this Privacy Policy.</p>
+        <p>If a future version introduces cloud accounts, synchronisation, online backups or other Leobella-hosted storage, this Privacy Policy will be updated before or when those features are introduced.</p>
+      </section>
 
-    <section class="card">
-      <h2>4. Pet passport scanning and OCR</h2>
-      <p>PetCom may use on-device optical character recognition (OCR) to help extract text from a pet passport or document photograph. The extracted information is presented for review and correction before it is applied to a pet profile.</p>
-      <p>PetCom is designed so that OCR processing for this feature is performed on the device using installed text-recognition technology. A user should always review imported information for accuracy.</p>
-    </section>
+      <section>
+        <h2>5. Pet-passport scanning and Google ML Kit OCR</h2>
+        <p>PetCom may use <strong>Google ML Kit text-recognition technology</strong> to assist with extracting text from a selected pet-passport or document image.</p>
+        <p>The image content and recognised text used for ML Kit text recognition are processed on the device. ML Kit does not send the input image, input text or resulting recognised content to Google servers for the purpose of text recognition.</p>
+        <p>The recognised information is presented for review or correction before it is used within the pet profile where the feature supports review.</p>
+        <p>Users should always verify automatically recognised information for accuracy.</p>
+        <p>Although recognition of the image and text occurs on-device, Google ML Kit may communicate limited technical, diagnostic and usage information to Google.</p>
+        <p>Depending on the ML Kit component and version, this can include information such as:</p>
+        <ul>
+          <li>device and operating-system information;</li><li>app identifier and app version;</li>
+          <li>per-installation technical identifiers;</li><li>performance measurements;</li>
+          <li>API configuration information;</li><li>feature-use events; and</li><li>error information.</li>
+        </ul>
+        <p>Google uses this technical information for purposes such as diagnostics, usage analytics, maintenance, performance measurement, improvement of ML Kit and prevention of misuse.</p>
+        <p>PetCom does not intentionally send the content of your pet-passport image or the text recognised from it to Google through ML Kit's text-recognition processing.</p>
+      </section>
 
-    <section class="card">
-      <h2>5. Location, maps and nearby services</h2>
-      <p>PetCom may request location permission when you use location-dependent features. Location access is optional unless a specific feature requires it.</p>
-      <p>Nearby pet-service results may be obtained from online mapping or open geographic data services. PetCom may also open Google Maps or other external map services when you choose an external map/search action.</p>
-      <p>Those third-party services process information under their own privacy policies. PetCom does not control the privacy practices of third-party websites or apps opened outside PetCom.</p>
-    </section>
+      <section>
+        <h2>6. Location, Google Maps and Google Places API (New)</h2>
+        <p>PetCom may request location permission when you choose to use location-dependent functionality.</p>
+        <p>Where supported by your device, you may be able to choose between approximate and precise location.</p>
+        <p>Providing precise location may improve the accuracy of nearby-service results, but location access remains under your control through your device settings.</p>
+        <p>PetCom uses or may use <strong>Google Maps Platform</strong>, including <strong>Google Maps SDK</strong> and <strong>Google Places SDK / Places API (New)</strong>, to provide maps, place information and nearby pet-service functionality.</p>
+        <p>When you request nearby places or use another Google Places-powered feature, information required to fulfil that request may be transmitted to Google.</p>
+        <p>Depending on the feature being used, this may include:</p>
+        <ul>
+          <li>latitude and longitude;</li><li>a geographic search area;</li><li>search radius;</li>
+          <li>place or service categories;</li><li>search terms entered by you;</li>
+          <li>location bias or location restrictions;</li><li>language or region information;</li>
+          <li>place identifiers;</li><li>session information associated with features such as autocomplete, where used; and</li>
+          <li>technical information required to process, secure and operate the request.</li>
+        </ul>
+        <p>Google Places may return information including business names, addresses, geographic coordinates, place categories, opening information, contact details, photographs, ratings or other place information depending on the information requested by PetCom.</p>
+        <p>Most Google Places requests may involve communication with Google's servers.</p>
+        <p>PetCom uses this information to provide the location-based functionality that you requested.</p>
+        <p>PetCom does not use your location for cross-app advertising tracking.</p>
+        <p>Google processes information received through Google Maps Platform according to Google's applicable terms, policies and privacy practices.</p>
+        <p>PetCom displays Google or third-party attribution where required by the Google Maps Platform terms.</p>
+      </section>
 
-    <section class="card">
-      <h2>6. Third-party services</h2>
-      <p>Depending on the features you use and the platform on which PetCom is installed, the app may rely on third-party services or software components, which can include:</p>
-      <ul>
-        <li>Google Maps / Google Maps Flutter components for map display or external map actions;</li>
-        <li>Google ML Kit text-recognition components for on-device OCR;</li>
-        <li>OpenStreetMap / Overpass or similar open geographic services for nearby place data;</li>
-        <li>weather or other network information services used by location-aware features;</li>
-        <li>Google Play or Apple App Store services for app distribution and purchases;</li>
-        <li>device services for notifications, secure storage, local authentication, sharing and file/photo selection.</li>
-      </ul>
-      <p>Each third-party service may process information according to its own terms and privacy policy.</p>
-    </section>
+      <section>
+        <h2>7. External maps and navigation</h2>
+        <p>PetCom may allow you to choose an external mapping, search or navigation service.</p>
+        <p>When you select an external action, PetCom may pass information necessary to perform that action, such as a destination, address, coordinates or search query, to the selected service.</p>
+        <p>Once an external application or website is opened, its own privacy policy and terms apply.</p>
+        <p>PetCom does not control the privacy practices of external applications or websites.</p>
+      </section>
 
-    <section class="card">
-      <h2>7. Local storage and device data</h2>
-      <p>PetCom stores app information locally on the device so that pet profiles and related records can remain available between app sessions.</p>
-      <p>Information stored locally may remain on the device until you delete it through the app, clear the app’s storage using the operating system, or uninstall the app.</p>
-      <p>Device backup systems provided by Apple, Google or the device manufacturer may also affect how app data is backed up or restored, depending on your device settings.</p>
-    </section>
+      <section>
+        <h2>8. Weather and other network services</h2>
+        <p>Where PetCom provides weather or other online information, PetCom may send information necessary to fulfil that request to the relevant service provider.</p>
+        <p>This may include approximate or precise location, geographic coordinates, a place name or another geographic reference.</p>
+        <p>The provider processes that request under its own applicable privacy terms.</p>
+        <p>PetCom should not transmit more information than is reasonably necessary to provide the requested feature.</p>
+      </section>
 
-    <section class="card">
-      <h2>8. Purchases and subscriptions</h2>
-      <p>If PetCom offers paid features, subscriptions or other in-app purchases, payment transactions are processed by the relevant app store provider.</p>
-      <p>PetCom does not receive your complete payment-card number. The app may receive purchase-status information required to determine whether a feature or entitlement is active.</p>
-    </section>
+      <section>
+        <h2>9. Other third-party services and SDKs</h2>
+        <p>Depending on the features you use and the platform on which PetCom is installed, PetCom may use third-party services or software components including:</p>
+        <ul>
+          <li>Google Maps Platform;</li><li>Google Maps SDK;</li><li>Google Places SDK / Places API (New);</li>
+          <li>Google ML Kit;</li><li>OpenStreetMap, Overpass or similar geographic services where used;</li>
+          <li>weather and network-information services;</li><li>Apple App Store;</li><li>Google Play;</li>
+          <li>operating-system notification services;</li><li>camera and photo-selection services;</li>
+          <li>secure-storage functionality;</li><li>local authentication;</li><li>file-selection functionality; and</li>
+          <li>device sharing functionality.</li>
+        </ul>
+        <p>Third-party providers may process information necessary to provide their respective services according to their own privacy policies and applicable terms.</p>
+        <p>Where PetCom shares or makes user information available to a third party through an integrated service or SDK, Leobella Technologies Ltd requires or selects services that provide the <strong>same or equivalent protection of user information</strong> as described in this Privacy Policy and as required by applicable App Store rules and data-protection law.</p>
+        <p>We expect third-party processors acting on our behalf to use personal information only for permitted purposes and subject to appropriate security and privacy safeguards.</p>
+        <p>Some third-party services may act independently under their own terms and privacy policies when you directly request or interact with their services.</p>
+      </section>
 
-    <section class="card">
-      <h2>9. Data sharing</h2>
-      <p>PetCom does not sell your personal information.</p>
-      <p>Information may be shared with third-party service providers only when necessary for a feature you choose to use, for app-store functionality, to comply with legal obligations, or to protect users, the app, or others from fraud, abuse or security threats.</p>
-    </section>
+      <section>
+        <h2>10. Purchases and subscriptions</h2>
+        <p>If PetCom offers paid features, subscriptions or other in-app purchases, payment transactions are processed by the relevant app-store provider, such as Apple or Google.</p>
+        <p>PetCom does not receive your complete payment-card number.</p>
+        <p>PetCom may receive limited purchase or entitlement information necessary to determine whether:</p>
+        <ul>
+          <li>a purchase succeeded;</li><li>a subscription is active;</li><li>a feature should be unlocked;</li>
+          <li>a purchase should be restored; or</li><li>an entitlement has expired.</li>
+        </ul>
+        <p>Apple and Google process payment information according to their respective privacy policies and terms.</p>
+      </section>
 
-    <section class="card">
-      <h2>10. Permissions</h2>
-      <ul>
-        <li>location;</li>
-        <li>camera and/or photos;</li>
-        <li>notifications;</li>
-        <li>biometric or local authentication, where used;</li>
-        <li>internet/network access.</li>
-      </ul>
-      <p>You can review or change most permissions at any time in your device settings. Disabling a permission may prevent the related PetCom feature from working.</p>
-    </section>
+      <section>
+        <h2>11. Data sharing</h2>
+        <p>PetCom does not sell your personal information.</p>
+        <p>PetCom does not share personal information with data brokers.</p>
+        <p>PetCom does not use information collected through the app for cross-app or cross-website advertising tracking.</p>
+        <p>Information may be transmitted to or processed by a third-party provider where reasonably necessary to:</p>
+        <ul>
+          <li>provide a feature you requested;</li><li>process maps or nearby-place requests;</li>
+          <li>provide weather or other online information;</li><li>perform technical diagnostics;</li>
+          <li>process purchases or subscriptions;</li><li>maintain app security;</li><li>prevent fraud, abuse or misuse;</li>
+          <li>comply with legal obligations; or</li><li>protect the rights, safety or security of users, Leobella Technologies Ltd or others.</li>
+        </ul>
+        <p>The information sent depends on the feature being used.</p>
+      </section>
 
-    <section class="card">
-      <h2>11. Data retention and deletion</h2>
-      <p>Locally stored pet and care information is generally retained until you remove it, reset the relevant app data, or uninstall PetCom.</p>
-      <p>Where a third-party service processes information, its own retention rules may apply.</p>
-      <p>If PetCom provides an account-based service in a future version, this Privacy Policy will be updated to explain account-data retention and account deletion procedures.</p>
-    </section>
+      <section>
+        <h2>12. Permissions</h2>
+        <p>PetCom may request device permissions including:</p>
+        <ul>
+          <li>precise or approximate location;</li><li>camera;</li><li>photos or photo library;</li>
+          <li>notifications; and</li><li>local or biometric authentication where such functionality is provided.</li>
+        </ul>
+        <p>Internet/network access may also be required for online features.</p>
+        <p>Permissions are requested only when relevant to a feature that requires them.</p>
+        <p>You can review or change permissions through your device settings.</p>
+        <p>Disabling a permission may prevent the related feature from functioning.</p>
+      </section>
 
-    <section class="card">
-      <h2>12. Children’s privacy</h2>
-      <p>PetCom is a pet-care utility and is not designed to knowingly collect personal information from children for advertising or profiling purposes.</p>
-      <p>Parents or guardians should supervise a child’s use of the app where appropriate.</p>
-    </section>
+      <section>
+        <h2>13. Face ID, Touch ID and local authentication</h2>
+        <p>Where PetCom uses Face ID, Touch ID or another device authentication mechanism, authentication is performed by the operating system.</p>
+        <p>PetCom does not receive or store your fingerprint, facial template or other underlying biometric template.</p>
+        <p>PetCom receives only the result needed to determine whether local authentication was successful.</p>
+      </section>
 
-    <section class="card">
-      <h2>13. Security</h2>
-      <p>We take reasonable measures intended to protect information handled by PetCom. However, no mobile device, local storage system, network transmission or online service can be guaranteed to be completely secure.</p>
-      <p>You are responsible for keeping your device secure and for controlling access to your device, app-store account and any backups.</p>
-    </section>
+      <section>
+        <h2>14. Withdrawing consent and changing permissions</h2>
+        <p>You remain in control of optional permissions.</p>
+        <p>You may withdraw location, camera, photo or notification permissions through the privacy and permission settings provided by iOS or Android.</p>
+        <p>Withdrawing permission prevents PetCom from using that permission for future actions, although functionality that depends on the permission may stop working.</p>
+        <p>Where PetCom specifically asks for consent and relies on that consent as the legal basis for processing personal information, you may withdraw that consent at any time.</p>
+        <p>Withdrawal does not affect the lawfulness of processing that occurred before consent was withdrawn.</p>
+        <p>If information is stored only locally on your device, you can generally manage or delete it directly within PetCom, through your operating-system application controls or by removing the app.</p>
+        <p>For privacy or deletion requests involving personal information controlled by Leobella Technologies Ltd that cannot be managed directly on the device, contact: <a href="mailto:office@leobellatechnologies.com">office@leobellatechnologies.com</a>.</p>
+      </section>
 
-    <section class="card">
-      <h2>14. International processing</h2>
-      <p>Some third-party services used by PetCom may process information in countries other than the country where you live. Their own privacy notices describe the safeguards and legal bases they use for such processing.</p>
-    </section>
+      <section>
+        <h2>15. Data retention and deletion</h2>
+        <p>Locally stored pet and care information is generally retained until you:</p>
+        <ul>
+          <li>delete the relevant information through PetCom;</li><li>clear PetCom's stored application data where supported;</li>
+          <li>reset the app where such functionality exists; or</li><li>uninstall PetCom.</li>
+        </ul>
+        <p>Deleting or uninstalling PetCom may not automatically remove copies contained in device backups created by Apple, Google or another backup provider.</p>
+        <p>Those backup systems operate according to your device settings and the provider's policies.</p>
+        <p>Information processed by third-party services may be retained according to the provider's legitimate operational requirements and applicable privacy policies.</p>
+        <p>Where Leobella Technologies Ltd directly controls personal information, we retain it only for as long as reasonably necessary for the purpose for which it was collected, to meet legal obligations, resolve disputes, maintain security or protect legitimate business interests.</p>
+        <p>When information is no longer required, we will delete or anonymise it where reasonably practicable and legally appropriate.</p>
+        <p>You may contact us to request deletion of personal information that Leobella Technologies Ltd controls.</p>
+      </section>
 
-    <section class="card">
-      <h2>15. Your choices and rights</h2>
-      <p>Depending on where you live, you may have legal rights relating to your personal information. These may include rights to access, correct, delete, restrict or object to certain processing.</p>
-      <p>For information stored only on your device, you can generally manage that information directly through PetCom and your device settings.</p>
-      <p>For privacy questions or requests, contact us using the details below.</p>
-    </section>
+      <section>
+        <h2>16. Legal bases for processing</h2>
+        <p>Where UK data-protection law applies to personal information processed by <strong>Leobella Technologies Ltd</strong>, we process information only where we have an appropriate lawful basis.</p>
 
-    <section class="card">
-      <h2>16. Changes to this Privacy Policy</h2>
-      <p>We may update this Privacy Policy when PetCom features, technologies, legal requirements or data practices change.</p>
-      <p>The current version will be published at this page and the effective date at the top will be updated when appropriate.</p>
-    </section>
+        <h3>Performance of a contract or steps requested by you</h3>
+        <p>We may process information where necessary to provide a service or feature you have requested or to fulfil our obligations associated with providing PetCom.</p>
 
-    <section class="card">
-      <h2>17. Contact</h2>
-      <p>For questions about this Privacy Policy or PetCom’s privacy practices, contact:</p>
-      <p><strong>Leobella Technologies Ltd</strong><br>PetCom Support<br>Email: <a href="mailto:office@leobellatechnologies.com">office@leobellatechnologies.com</a></p>
-    </section>
+        <h3>Consent</h3>
+        <p>Where required, we may rely on your consent for optional processing.</p>
+        <p>Where consent is our legal basis, you can withdraw it at any time.</p>
 
-    <p class="footer">© 2026 Leobella Technologies Ltd. Privacy Policy for PetCom: Pet Care.</p>
-  </main>
+        <h3>Legitimate interests</h3>
+        <p>We may rely on legitimate interests where processing is reasonably necessary for purposes such as:</p>
+        <ul>
+          <li>operating and maintaining PetCom;</li><li>ensuring app security;</li><li>preventing fraud or abuse;</li>
+          <li>diagnosing technical failures;</li><li>responding to support enquiries; and</li><li>improving reliability and performance.</li>
+        </ul>
+        <p>Where we rely on legitimate interests, we consider whether those interests are outweighed by your rights and interests.</p>
+
+        <h3>Legal obligations</h3>
+        <p>We may process or retain information where necessary to comply with applicable law, regulatory requirements, legal claims or lawful requests.</p>
+        <p>The operating-system permission shown by your device is not necessarily the same thing as consent under data-protection law. We determine the lawful basis according to the particular processing activity.</p>
+      </section>
+
+      <section>
+        <h2>17. Children's privacy</h2>
+        <p>PetCom is a pet-care organisation and information tool.</p>
+        <p>It is not designed to knowingly collect children's personal information for advertising, behavioural profiling or data-broker purposes.</p>
+        <p>Parents or guardians should supervise a child's use of PetCom where appropriate.</p>
+        <p>If Leobella Technologies Ltd becomes aware that personal information relating to a child has been processed in a way that requires parental authorisation and that authorisation has not been obtained, we will take appropriate action consistent with applicable law.</p>
+      </section>
+
+      <section>
+        <h2>18. Security</h2>
+        <p>Leobella Technologies Ltd takes reasonable technical and organisational measures intended to protect information handled through PetCom.</p>
+        <p>PetCom is designed to limit unnecessary data transmission and to keep core pet records locally stored where appropriate.</p>
+        <p>However, no mobile device, storage technology, software system or internet transmission can be guaranteed to be completely secure.</p>
+        <p>Users should:</p>
+        <ul>
+          <li>keep their device protected;</li><li>use appropriate device authentication;</li>
+          <li>keep their operating system updated;</li><li>protect their Apple or Google account;</li>
+          <li>control access to device backups; and</li><li>avoid sharing sensitive information unnecessarily.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>19. International processing</h2>
+        <p>Some third-party providers used by PetCom may process information in countries outside the United Kingdom.</p>
+        <p>Where <strong>Leobella Technologies Ltd is responsible for an international transfer of personal information</strong>, we use an applicable lawful transfer mechanism and appropriate safeguards as required by UK data-protection law.</p>
+        <p>Where a third-party service acts independently, its privacy policy explains how it handles international transfers and the safeguards it applies.</p>
+      </section>
+
+      <section>
+        <h2>20. Your privacy rights</h2>
+        <p>Depending on where you live and the circumstances of the processing, you may have rights relating to your personal information.</p>
+        <p>These can include the right to:</p>
+        <ul>
+          <li>request access to personal information;</li><li>request correction of inaccurate information;</li>
+          <li>request deletion;</li><li>request restriction of processing;</li><li>object to certain processing;</li>
+          <li>request portability where applicable;</li><li>withdraw consent where processing relies on consent; and</li>
+          <li>complain to an applicable data-protection authority.</li>
+        </ul>
+        <p>These rights are subject to applicable legal conditions and exemptions.</p>
+        <p>For information stored only on your device, you can generally exercise control directly through PetCom and your device settings.</p>
+        <p>For information controlled by Leobella Technologies Ltd, contact: <a href="mailto:office@leobellatechnologies.com">office@leobellatechnologies.com</a>.</p>
+      </section>
+
+      <section>
+        <h2>21. Complaints and the UK Information Commissioner's Office</h2>
+        <p>If you have a concern about how Leobella Technologies Ltd handles your personal information, please contact us first so that we have an opportunity to investigate and respond.</p>
+        <p>If you are located in the United Kingdom, you also have the right to raise a complaint with the <strong>Information Commissioner's Office (ICO)</strong>, the UK's data-protection regulator.</p>
+        <p>Information about exercising your rights and making a complaint is available through the ICO's official website.</p>
+        <p>Contacting the ICO does not affect any other rights or remedies available to you.</p>
+      </section>
+
+      <section>
+        <h2>22. App-store privacy disclosures</h2>
+        <p>Leobella Technologies Ltd maintains privacy disclosures for PetCom in the relevant app stores.</p>
+        <p>These disclosures are intended to reflect both:</p>
+        <ul>
+          <li>PetCom's own data practices; and</li>
+          <li>applicable data practices of third-party SDKs and services integrated into the app.</li>
+        </ul>
+        <p>Because SDKs, operating systems and app functionality can change over time, these disclosures are reviewed and updated when required.</p>
+      </section>
+
+      <section>
+        <h2>23. Changes to this Privacy Policy</h2>
+        <p>We may update this Privacy Policy when:</p>
+        <ul>
+          <li>PetCom functionality changes;</li><li>third-party services change;</li><li>SDK behaviour changes;</li>
+          <li>new services are introduced;</li><li>legal requirements change; or</li><li>our data-handling practices change.</li>
+        </ul>
+        <p>Where appropriate, we will update the effective date shown at the top of this policy.</p>
+        <p>Material changes may also be communicated through PetCom or another appropriate method.</p>
+        <p>You should periodically review the current version of this Privacy Policy.</p>
+      </section>
+
+      <section>
+        <h2>24. Contact</h2>
+        <div class="contact-box">
+          <p>For questions, privacy requests or concerns about PetCom's handling of personal information, contact:</p>
+          <p>
+            <strong>Leobella Technologies Ltd</strong><br>
+            <strong>PetCom Support</strong><br>
+            Email: <a href="mailto:office@leobellatechnologies.com">office@leobellatechnologies.com</a><br>
+            United Kingdom
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 Leobella Technologies Ltd. Privacy Policy for PetCom: Pet Care.
+    </footer>
+  </article>
 </body>
 </html>
