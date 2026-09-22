@@ -92,7 +92,7 @@
       <p class="eyebrow">Leobella Technologies Ltd</p>
       <h1>🐾 PetCom: Pet Care — Privacy Policy</h1>
       <p class="meta">
-        <strong>Effective date:</strong> 20 September 2026<br>
+        <strong>Effective date:</strong> 22 September 2026<br>
         <strong>Publisher:</strong> Leobella Technologies Ltd<br>
         <strong>Platforms:</strong> Android and iOS
       </p>
@@ -102,7 +102,7 @@
       <section class="summary" aria-labelledby="privacy-at-a-glance">
         <h2 id="privacy-at-a-glance" style="margin-top:0;">Privacy at a glance</h2>
         <p>PetCom is designed to help users organise pet profiles, care information, reminders, photographs, pet-passport information, maps, nearby pet services and other pet-care information.</p>
-        <p>Core pet records are designed to be stored locally on the user's device. PetCom does not currently require a PetCom user account.</p>
+        <p>PetCom stores pet records locally for offline use. A PetCom cloud account is optional; if you create one, verify its email address and enable sync, account details, pet records and selected images are also stored through Google Firebase so they can appear on your other devices.</p>
         <p>Some optional features communicate with third-party services when you choose to use them. For example, location and search information may be sent to Google Maps Platform and Google Places services when you request nearby pet services or map information.</p>
         <p><strong>PetCom does not sell your personal information.</strong></p>
         <p>PetCom does not use your personal information for cross-app advertising tracking.</p>
@@ -127,15 +127,19 @@
           <li>treatment or care information;</li><li>medication or care notes;</li><li>reminders;</li>
           <li>appointments;</li><li>pet-passport information; and</li><li>other pet-related records you choose to store.</li>
         </ul>
-        <p>Core pet records are designed to remain locally stored on your device unless a particular feature clearly tells you that information will be sent to an external service.</p>
+        <p>Core pet records are stored locally on your device. If you choose a verified PetCom cloud account, the records are also synchronised to your private account in Google Cloud Firestore.</p>
 
         <h3>Owner, care-team and veterinary contact information</h3>
         <p>Information you choose to enter may also include an optional owner or profile name and email address; a care-team member's name, relationship, phone number and email address; and a chosen veterinary practice or veterinarian's name, phone number, email address and address.</p>
-        <p>This contact information is designed to remain locally stored on your device. It leaves the device only when you deliberately use an export, backup or sharing action and select a destination, or where another feature clearly explains that it will be sent externally.</p>
+        <p>This information is stored locally. It may also be synchronised to your private Google Cloud Firestore account if you enable verified PetCom cloud sync, or leave the device when you deliberately export, back up or share it with a destination you choose.</p>
+
+        <h3>PetCom account information</h3>
+        <p>If you create a cloud account, PetCom processes your first and last name, email address, password credential, email-verification status and a unique account identifier through Firebase Authentication and Cloud Firestore. Your password is handled by Firebase Authentication; PetCom does not store it in the pet-record database.</p>
 
         <h3>Photos and documents</h3>
         <p>If you choose to add a pet photograph, use the camera, select an image, or import information from a pet passport or other document, PetCom may access your camera or photo library after you grant the relevant device permission.</p>
         <p>Selected pet-passport or document images may contain information about the pet and may also contain personal information relating to an owner, keeper, veterinary professional or another person.</p>
+        <p>If you enable a verified cloud account, selected pet profile, passport and gallery images are uploaded to your private owner-scoped Firebase Storage area for sync across your devices. Images shared through your phone's share sheet are sent to the destination you choose.</p>
         <p>You should only import documents that you are authorised to use.</p>
 
         <h3>Location information</h3>
@@ -170,7 +174,7 @@
         <h2>3. How PetCom uses information</h2>
         <p>PetCom may process information in order to:</p>
         <ul>
-          <li>create and display pet profiles;</li><li>store pet-care information;</li><li>organise health and care records;</li>
+          <li>create and display pet profiles;</li><li>create and protect optional PetCom accounts;</li><li>synchronise pet records and selected photos between signed-in devices;</li><li>store pet-care information;</li><li>organise health and care records;</li>
           <li>store and display reminders;</li><li>schedule local notifications;</li><li>display maps;</li>
           <li>locate nearby pet-related services;</li><li>provide weather-related information;</li><li>provide location-aware information;</li>
           <li>process selected pet-passport or document images;</li><li>extract text through optical character recognition;</li>
@@ -183,13 +187,17 @@
       </section>
 
       <section>
-        <h2>4. Local storage and Leobella Technologies servers</h2>
+        <h2>4. Local storage and optional cloud synchronisation</h2>
         <p>PetCom is designed so that core pet information is primarily stored locally on the user's device.</p>
         <p>This may include pet profiles, care records, reminders and other information entered directly into the app.</p>
-        <p>The current version of PetCom does not require a PetCom cloud account.</p>
-        <p>Leobella Technologies Ltd does not intentionally receive a copy of your complete locally stored pet profile, care history, pet photographs or pet-passport content merely because you create or store that information in PetCom.</p>
-        <p>Some optional functions communicate with third-party online services. Information necessary to fulfil those requests may leave the device as described elsewhere in this Privacy Policy.</p>
-        <p>If a future version introduces cloud accounts, synchronisation, online backups or other Leobella-hosted storage, this Privacy Policy will be updated before or when those features are introduced.</p>
+        <p>You can use the app without a PetCom cloud account. If you choose to create or sign in to a verified account, PetCom uses Google Firebase as a service provider for authentication, synchronisation and recovery across devices:</p>
+        <ul>
+          <li><strong>Firebase Authentication</strong> processes the account email, password credential, verification status and account identifier.</li>
+          <li><strong>Cloud Firestore</strong> stores account profile information and copies of pet profiles, care and health records, exercise history, passport details, care-team and veterinarian contacts, appointments, prescriptions and saved pet services.</li>
+          <li><strong>Firebase Storage</strong> stores selected pet profile, passport and gallery images.</li>
+        </ul>
+        <p>PetCom also records a pseudonymous device identifier, synchronisation timestamps, content hashes and deletion markers to keep devices consistent. Cloud copies are linked to your account and access is restricted to its signed-in owner by Firebase Security Rules. PetCom uses encrypted network connections for these services. Cloud Firestore and the photo bucket are configured in London, United Kingdom; Google may also process limited service data in other locations under its applicable terms.</p>
+        <p>Cloud sync starts after a verified sign-in and runs when the app starts, resumes, remains open periodically or when you choose to sync. Local data remains available offline. If you do not enable cloud sync, creating local pet records or images does not by itself upload those records to the PetCom cloud, although other online features may transmit the information described elsewhere in this policy.</p>
       </section>
 
       <section>
@@ -255,6 +263,7 @@
         <ul>
           <li>Google Maps Platform;</li><li>Google Maps SDK;</li><li>Google Places SDK / Places API (New);</li>
           <li>Google ML Kit;</li><li>OpenStreetMap, Overpass or similar geographic services where used;</li>
+          <li>Google Firebase Authentication, Cloud Firestore and Firebase Storage when you enable cloud sync;</li>
           <li>weather and network-information services;</li><li>Apple App Store;</li><li>Google Play;</li>
           <li>operating-system notification services;</li><li>camera and photo-selection services;</li>
           <li>secure-storage functionality;</li><li>local authentication;</li><li>file-selection functionality; and</li>
@@ -321,7 +330,7 @@
         <p>Where PetCom specifically asks for consent and relies on that consent as the legal basis for processing personal information, you may withdraw that consent at any time.</p>
         <p>Withdrawal does not affect the lawfulness of processing that occurred before consent was withdrawn.</p>
         <p>If information is stored only locally on your device, you can generally manage or delete it directly within PetCom, through your operating-system application controls or by removing the app.</p>
-        <p>For privacy or deletion requests involving personal information controlled by Leobella Technologies Ltd that cannot be managed directly on the device, contact: <a href="mailto:office@leobellatechnologies.com">office@leobellatechnologies.com</a>.</p>
+        <p>If you have a cloud account, you can choose <strong>Delete cloud account</strong> in PetCom's account screen. You can also request deletion without the app using our <a href="delete-account.html">PetCom account-deletion page</a>. For other privacy requests, contact: <a href="mailto:office@leobellatechnologies.com">office@leobellatechnologies.com</a>.</p>
       </section>
 
       <section>
@@ -337,6 +346,7 @@
         <p>Where Leobella Technologies Ltd directly controls personal information, we retain it only for as long as reasonably necessary for the purpose for which it was collected, to meet legal obligations, resolve disputes, maintain security or protect legitimate business interests.</p>
         <p>When information is no longer required, we will delete or anonymise it where reasonably practicable and legally appropriate.</p>
         <p>You may contact us to request deletion of personal information that Leobella Technologies Ltd controls.</p>
+        <p>Deleting your PetCom cloud account removes its Firebase Authentication account and the related PetCom Cloud Firestore records and Firebase Storage images. Your local records on a phone are not automatically erased by cloud-account deletion, and files you deliberately exported, shared or saved to another service must be deleted separately. Limited service, security, backup or legal records may be retained where required or permitted by law or Google's applicable terms. See the <a href="delete-account.html">account-deletion request page</a> for instructions if you no longer have the app.</p>
       </section>
 
       <section>
@@ -374,7 +384,7 @@
       <section>
         <h2>18. Security</h2>
         <p>Leobella Technologies Ltd takes reasonable technical and organisational measures intended to protect information handled through PetCom.</p>
-        <p>PetCom is designed to limit unnecessary data transmission and to keep core pet records locally stored where appropriate.</p>
+        <p>PetCom is designed to limit unnecessary data transmission. Cloud account data and photos are protected by verified sign-in and owner-scoped database and storage rules; local-first use remains available.</p>
         <p>However, no mobile device, storage technology, software system or internet transmission can be guaranteed to be completely secure.</p>
         <p>Users should:</p>
         <ul>
