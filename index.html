@@ -251,10 +251,10 @@
 
       <section>
         <h2>8. Weather and other network services</h2>
-        <p>PetCom may use OpenStreetMap's Nominatim service for address or place-name geocoding. On iPhone, weather forecasts use MET Norway. On Android, weather forecasts use Open-Meteo, with MET Norway as a fallback.</p>
-        <p>For these features, PetCom sends information needed to fulfil the request. This may include location coordinates rounded to four decimal places, a place name, postcode or another geographic reference. MET Norway requests also include a PetCom user-agent with our support email. Forecast data is credited in the app, with a link to its source and CC BY 4.0 licence.</p>
-        <p>The provider processes that request under its own applicable privacy terms.</p>
-        <p>For more information, see the providers' privacy information: <a href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Foundation</a>, <a href="https://open-meteo.com/en/terms">Open-Meteo</a> and <a href="https://www.met.no/en/About-us/privacy">MET Norway</a>.</p>
+        <p>PetCom may use OpenStreetMap's Nominatim service for address or place-name geocoding. Newer Android and iOS builds use Google Weather API as the primary forecast source, with MET Norway as a backup. Older Android builds may use Open-Meteo as the primary source, with MET Norway as a backup; some earlier iOS builds use MET Norway.</p>
+        <p>In builds using Google Weather, the app sends the selected location coordinates to a PetCom Firebase Cloud Function protected by Firebase App Check. The function forwards coordinates rounded to four decimal places to Google Weather using server-side credentials. Google receives the request from the PetCom server rather than directly from the phone. If Google Weather is unavailable, the phone requests a forecast directly from MET Norway. MET Norway may receive the phone's IP address, rounded coordinates and a PetCom user-agent with our support email.</p>
+        <p>For manual location searches and older weather builds, PetCom sends the information needed to fulfil the selected request. This may include rounded coordinates, a place name, postcode or another geographic reference. The app identifies the forecast source. Google Weather data carries Google Maps and weather-data attribution; MET Norway data carries source and CC BY 4.0 attribution.</p>
+        <p>Each provider processes requests under its applicable privacy terms. See <a href="https://policies.google.com/privacy">Google</a>, <a href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Foundation</a>, <a href="https://open-meteo.com/en/terms">Open-Meteo</a> and <a href="https://www.met.no/en/About-us/privacy">MET Norway</a>.</p>
       </section>
 
       <section>
