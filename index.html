@@ -92,7 +92,7 @@
       <p class="eyebrow">Leobella Technologies Ltd</p>
       <h1>🐾 PetCom: Pet Care — Privacy Policy</h1>
       <p class="meta">
-        <strong>Effective date:</strong> 22 September 2026<br>
+        <strong>Effective date:</strong> 11 October 2026<br>
         <strong>Publisher:</strong> Leobella Technologies Ltd<br>
         <strong>Platforms:</strong> Android and iOS
       </p>
@@ -102,7 +102,7 @@
       <section class="summary" aria-labelledby="privacy-at-a-glance">
         <h2 id="privacy-at-a-glance" style="margin-top:0;">Privacy at a glance</h2>
         <p>PetCom is designed to help users organise pet profiles, care information, reminders, photographs, pet-passport information, maps, nearby pet services and other pet-care information.</p>
-        <p>PetCom stores pet records locally for offline use. Free access includes one local pet and does not provide a cloud account. Premium subscribers may choose to create a PetCom cloud account; after email verification and sync opt-in, account details, pet records and selected images are also stored through Google Firebase so they can appear on your other devices.</p>
+        <p>PetCom stores pet records locally for offline use. A cloud account is free to create. Free access supports one pet on one registered phone and includes owner-approved Business Shared Care. Pairing with a care business and receiving its photos, appointments, medication updates, reminders and history do not require Premium. Personal Premium adds more pets, multiple phones, personal backup/synchronisation and additional personal features. Cloud services begin after verified sign-in and the relevant opt-in or sharing approval.</p>
         <p>Some optional features communicate with third-party services when you choose to use them. For example, location and search information may be sent to Google Maps Platform and Google Places services when you request nearby pet services or map information.</p>
         <p><strong>PetCom does not sell your personal information.</strong></p>
         <p>PetCom does not use your personal information for cross-app advertising tracking.</p>
@@ -127,7 +127,7 @@
           <li>treatment or care information;</li><li>medication or care notes;</li><li>reminders;</li>
           <li>appointments;</li><li>pet-passport information; and</li><li>other pet-related records you choose to store.</li>
         </ul>
-        <p>Core pet records are stored locally on your device. If you choose a verified PetCom cloud account, the records are also synchronised to your private account in Google Cloud Firestore.</p>
+        <p>Core pet records are stored locally on your device. If you enable personal cloud synchronisation, selected records are also stored in your private Google Cloud Firestore account. If you approve Business Shared Care, your approved pet profile and history are uploaded for that company and its authorised staff to provide care.</p>
 
         <h3>Owner, care-team and veterinary contact information</h3>
         <p>Information you choose to enter may also include an optional owner or profile name and email address; a care-team member's name, relationship, phone number and email address; and a chosen veterinary practice or veterinarian's name, phone number, email address and address.</p>
@@ -156,7 +156,7 @@
         <p>When you search for places, services, addresses or other location-related information, PetCom may process the search terms and geographic search parameters needed to provide the requested results.</p>
 
         <h3>Notifications</h3>
-        <p>If you enable notifications, PetCom may schedule notifications for reminders and other pet-care alerts. Notification permission is controlled through your device operating system.</p>
+        <p>If you enable notifications, PetCom may schedule appointment reminders and pet-care alerts and receive business-update notifications through Firebase Cloud Messaging and Apple notification services. Push tokens, installation identifiers and delivery state are linked to your account to route updates to the correct owner and enforce device access. Device settings, permissions and connectivity may delay delivery. Notification permission is controlled through your device operating system.</p>
 
         <h3>Device and technical information</h3>
         <p>PetCom, the operating system and third-party SDKs or services integrated into PetCom may process limited technical information necessary to provide features, maintain security, diagnose errors and measure technical performance.</p>
@@ -196,8 +196,11 @@
           <li><strong>Cloud Firestore</strong> stores account profile information and copies of pet profiles, care and health records, exercise history, passport details, care-team and veterinarian contacts, appointments, prescriptions and saved pet services.</li>
           <li><strong>Firebase Storage</strong> stores selected pet profile, passport and gallery images.</li>
         </ul>
-        <p>PetCom also records a pseudonymous device identifier, synchronisation timestamps, content hashes and deletion markers to keep devices consistent. Cloud copies are linked to your account and access is restricted to its signed-in owner by Firebase Security Rules. PetCom uses encrypted network connections for these services. Cloud Firestore and the photo bucket are configured in London, United Kingdom; Google may also process limited service data in other locations under its applicable terms.</p>
-        <p>Cloud sync starts after a verified sign-in and runs when the app starts, resumes, remains open periodically or when you choose to sync. Local data remains available offline. If you do not enable cloud sync, creating local pet records or images does not by itself upload those records to the PetCom cloud, although other online features may transmit the information described elsewhere in this policy.</p>
+        <p>PetCom records account-linked registration, installation and push identifiers, synchronisation timestamps, content hashes and deletion markers for access control, delivery and consistency. Personal cloud copies are owner-scoped. Approved Business Shared Care is accessed through permission-checked server functions by the owner and authorised company staff. PetCom uses encrypted network connections; this is not end-to-end encryption because authorised servers process shared care. Cloud Firestore and the photo bucket are configured in London, United Kingdom; Google may also process limited service data in other locations under its applicable terms.</p>
+        <p>Cloud services run after verified sign-in when the app starts, resumes, refreshes or runs permitted background work. Local records remain available offline; interrupted deliveries can retry. Creating a local record does not by itself upload it unless you enable personal sync or approve sharing; other online features may transmit the information described elsewhere in this policy.</p>
+        <h3>Business Shared Care and your choices</h3>
+        <p>You choose which pet and information to share before pairing with a participating company. The company and its authorised staff can see the approved pet profile, picture and history and send photos, appointments, care reports, medication records and reminders. Care records identify the staff member who saved them. Pairing invitations, permissions, staff attribution and delivery records are stored to route and audit this access.</p>
+        <p>You can revoke company access in Business Shared Care. Revocation prevents future authorised access and delivery; it does not automatically erase files already exported or saved independently. A business may have lawful duties to retain its own care records; contact it about those copies. Free business sharing is separate from Premium personal backup and multiple-device access. Business licences are separate from customer Premium subscriptions.</p>
       </section>
 
       <section>
@@ -263,7 +266,7 @@
         <ul>
           <li>Google Maps Platform;</li><li>Google Maps SDK;</li><li>Google Places SDK / Places API (New);</li>
           <li>Google ML Kit;</li><li>OpenStreetMap, Overpass or similar geographic services where used;</li>
-          <li>Google Firebase Authentication, Cloud Firestore and Firebase Storage when you enable cloud sync;</li>
+          <li>Google Firebase Authentication, Cloud Firestore, Firebase Storage, Cloud Messaging, App Check and Cloud Functions for enabled account, sharing, notification and cloud services;</li>
           <li>weather and network-information services;</li><li>Apple App Store;</li><li>Google Play;</li>
           <li>operating-system notification services;</li><li>camera and photo-selection services;</li>
           <li>secure-storage functionality;</li><li>local authentication;</li><li>file-selection functionality; and</li>
@@ -284,7 +287,7 @@
           <li>a purchase succeeded;</li><li>a subscription is active;</li><li>a feature should be unlocked;</li>
           <li>a purchase should be restored; or</li><li>an entitlement has expired.</li>
         </ul>
-        <p>PetCom verifies purchase status with the relevant app store and stores limited subscription identifiers and expiry information in Firebase so Premium access and cloud sync can be granted or removed correctly. Apple and Google process payment information according to their respective privacy policies and terms.</p>
+        <p>PetCom verifies purchase status with the relevant app store and stores limited subscription identifiers and expiry information in Firebase to manage Premium features and personal cloud synchronisation. Premium expiry does not remove free Business Shared Care access. Apple and Google process payment information according to their respective privacy policies and terms.</p>
       </section>
 
       <section>
@@ -346,7 +349,7 @@
         <p>Where Leobella Technologies Ltd directly controls personal information, we retain it only for as long as reasonably necessary for the purpose for which it was collected, to meet legal obligations, resolve disputes, maintain security or protect legitimate business interests.</p>
         <p>When information is no longer required, we will delete or anonymise it where reasonably practicable and legally appropriate.</p>
         <p>You may contact us to request deletion of personal information that Leobella Technologies Ltd controls.</p>
-        <p>Deleting your PetCom cloud account removes its Firebase Authentication account and the related PetCom Cloud Firestore records and Firebase Storage images. Your local records on a phone are not automatically erased by cloud-account deletion, and files you deliberately exported, shared or saved to another service must be deleted separately. Limited service, security, backup or legal records may be retained where required or permitted by law or Google's applicable terms. See the <a href="delete-account.html">account-deletion request page</a> for instructions if you no longer have the app.</p>
+        <p>Deleting your PetCom cloud account removes its Firebase Authentication account, associated cloud profile, owned cloud records and images, and its sharing access through the account-cleanup process. Local phone records are not automatically erased, and independently exported or saved copies must be deleted separately. Businesses may retain their independently held care records where legally required. Limited service, security, backup or legal records may be retained where required or permitted by law or Google's applicable terms. See the <a href="delete-account.html">account-deletion request page</a> for instructions if you no longer have the app.</p>
       </section>
 
       <section>
@@ -384,7 +387,7 @@
       <section>
         <h2>18. Security</h2>
         <p>Leobella Technologies Ltd takes reasonable technical and organisational measures intended to protect information handled through PetCom.</p>
-        <p>PetCom is designed to limit unnecessary data transmission. Cloud account data and photos are protected by verified sign-in and owner-scoped database and storage rules; local-first use remains available.</p>
+        <p>PetCom is designed to limit unnecessary data transmission. Personal cloud data and photos are protected by verified sign-in and owner-scoped rules. Business Shared Care uses server-checked company membership, owner permissions and staff roles. Local-first use remains available. Platform secure storage protects credentials; Business queues and cache use local encryption. These measures do not make shared care end-to-end encrypted.</p>
         <p>However, no mobile device, storage technology, software system or internet transmission can be guaranteed to be completely secure.</p>
         <p>Users should:</p>
         <ul>
